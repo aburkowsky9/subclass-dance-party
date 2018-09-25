@@ -1,10 +1,10 @@
 var TinyDancer = function(top, left, timeBetweenSteps) {
-  Dancer.call(this, top, left, timeBetweenSteps);
-  debugger;
-  this.$node = $('<span class="batman"><img src="Batman.png"></span>');
+  this.$batmanImg = $('<div class="batman"></div>');
+  BlinkyDancer.call(this, top, left, timeBetweenSteps); 
+  
 };
 
-TinyDancer.prototype = Object.create(Dancer.prototype);
+TinyDancer.prototype = Object.create(BlinkyDancer.prototype);
 
 TinyDancer.prototype.constructor = TinyDancer;
 

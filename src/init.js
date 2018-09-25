@@ -33,12 +33,14 @@ $(document).ready(function() {
   $('.batSignal').on('click', function(event) {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
     var dancerMakerFunction = window[dancerMakerFunctionName];
-    var dancer = new dancerMakerFunction(
+    var batman = new dancerMakerFunction(
       $("body").height() * Math.random(),
       $("body").width() * Math.random(),
       Math.random() * 1000
-    ); 
-    $('body').append(dancer.$node);
+    );
+    batman.$batmanImg.html("<img src='Batman.png'>").fadeIn(3500).appendTo("body");
   });
+
+  //third dancer
 });
 
