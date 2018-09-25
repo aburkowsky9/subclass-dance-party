@@ -25,3 +25,16 @@ body, a:link, a:visited, a:active{
   border-radius:10px;
   position:absolute;
 }
+.batSignal{
+  border:10px solid;
+  border-radius:10px;
+  position:absolute;
+}
+.batSignal:hover{
+  cursor: pointer;
+}
+.batman img{
+  height: 100px;
+  border:10px solid;
+  position:absolute;
+}
