@@ -22,8 +22,8 @@ $(document).ready(function() {
     // make a dancer with a random position
     
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $(".grid").height() * 0.75 * Math.random(),
+      $(".grid").width() * 0.75 * Math.random(),
       Math.random() * 1000
     ); 
     
@@ -36,8 +36,8 @@ $(document).ready(function() {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
     var dancerMakerFunction = window[dancerMakerFunctionName];
     var batman = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $(".grid").height() * 0.75 * Math.random(),
+      $(".grid").width() * 0.75 * Math.random(),
       Math.random() * 1000
     );
     batman.$batmanImg.html("<img src='Batman.png'>").fadeIn(2000).appendTo(".grid");
@@ -49,8 +49,8 @@ $(document).ready(function() {
     var dancerMakerFunctionName = $(this).data('dancer-maker-function-name');
     var dancerMakerFunction = window[dancerMakerFunctionName];
     var gifDancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
+      $(".grid").height() * 0.75 * Math.random(),
+      $(".grid").width() * 0.75 * Math.random(),
       Math.random() * 1000
     );
     gifDancer.$gifImg.html("<img src='https://media.giphy.com/media/nMSGo0Ulx4s9i/giphy.gif'>").appendTo(".grid");
@@ -70,13 +70,13 @@ $(document).ready(function() {
       width:'auto'
     }, 1000)
   });
-  $(document).on("mouseout", ".item", function(event) {
-    let $img = $(this.childNodes[0]);
-    $img.animate({
-      height:'200px',
-      width:'auto'
-    }, 500)
-  });
+  // $(document).on("mouseout", ".item", function(event) {
+  //   let $img = $(this.childNodes[0]);
+  //   $img.animate({
+  //     height:'200px',
+  //     width:'auto'
+  //   })
+  // });
   
   $(document).on("click", ".item", function(event) {
     let posX = event.pageX;
@@ -85,24 +85,25 @@ $(document).ready(function() {
       let xRange = Math.abs(posX - instance.left);
       let yRange = Math.abs(posY - instance.top);
       let distance = Math.sqrt(Math.abs((xRange**2) - (yRange**2)));
-      if (distance < 400) {
-        if (instance.$batmanImg) {debugger;
-          let img = instance.$batmanImg[0].childNodes[0];
-          let $img = $(img);
-          $img.css("height", "400px");
+
+      if (distance < 80) {
+        if (instance.$batmanImg) {
+          let imgBat = instance.$batmanImg[0].childNodes[0];
+          let $imgBat = $(imgBat);
+          $imgBat.css("height", "400px");
         } 
         else if (instance.$node) {
-          let img = instance.$batmanImg[0].childNodes[0];
-          let $img = $(img);
-          let $img = $(instance.$node.childNodes[0]);
-          $img.css("height", "400px");
+          let imgNode = instance.$node[0].childNodes[0];
+          let $imgNode = $(imgNode);
+          $imgNode.css("height", "400px");
         }
         else if (instance.$gifImg) {
-          let $img = $(instance.$gifImg.childNodes[0])
-          $img.css("height", "400px");
+          let imgGif = instance.$gifImg[0].childNodes[0];
+          let $imgGif = $(imgGif);
+          $imgGif.css("height", "400px");
         }
       }
-    })
+    });
   });
 });
 

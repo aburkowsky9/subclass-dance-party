@@ -44,5 +44,9 @@ var Dancer = function(top, left, timeBetweenSteps) {
 Dancer.prototype.lineUp = function(idx) {
   let top = (window.innerHeight / 2) - 100;
   let left = 204 * idx;
+  if (left >= window.innerWidth - 50) {
+    top += 200;
+    left = 204 * (idx - 8);
+  }
   this.setPosition(top,left);
 }

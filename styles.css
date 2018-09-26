@@ -10,14 +10,12 @@ body{
   font-size: 18px;
 }
 .grid{
-  overflow-wrap: normal; 
   height:100%;
   width: 100%;
-  padding: 20px;
-  background-image: url("https://pre00.deviantart.net/5770/th/pre/f/2015/060/d/3/batman_background_by_mrfiregem-d8k0ufv.png");
-  background-position: center; /* Center the image */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; 
+  background-image: url("batmanImg.png");
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-size: cover;  
 }
 /* topbar */
 .topbar{
@@ -54,8 +52,10 @@ button:hover{
 }
 .batman, .gif{
   position:absolute;
+  margin: 20px;
 }
 img{
   height:200px;
+  display: inline-block;
 }
 
