@@ -1,10 +1,10 @@
 // Creates and returns a new dancer object that can step
 var Dancer = function(top, left, timeBetweenSteps) {
   // use jQuery to create an HTML <span> tag
-  if (!this.$batmanImg && !this.$gifImg) {
-    this.$node = $('<span class="dancer item"></span>');
-    this.step();
-  }
+  // if (!this.$batmanImg && !this.$gifImg) {
+  this.$node = $('<span class="dancer item"></span>');
+  this.step();
+  // }
   this.top = top;
   this.left = left;
   // now that we have defined the dancer object, we can start setting up important parts of it by calling the methods we wrote
@@ -29,15 +29,16 @@ var Dancer = function(top, left, timeBetweenSteps) {
       margin: "10px"
     };
 
-    if (this.$batmanImg) {
-      this.$batmanImg.css(styleSettings);
-    } 
-    else if (this.$node) {
-      this.$node.css(styleSettings);
-    }
-    else if (this.$gifImg) {
-      this.$gifImg.css(styleSettings);
-    }
+    // if (this.$batmanImg) {
+    //   this.$batmanImg.css(styleSettings);
+    // } 
+    //else if below
+   // if (this.$node) {
+    this.$node.css(styleSettings);
+    // }
+    // else if (this.$gifImg) {
+    //   this.$gifImg.css(styleSettings);
+    // }
     
   };
 

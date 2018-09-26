@@ -26,7 +26,7 @@ $(document).ready(function() {
       $(".grid").width() * 0.75 * Math.random(),
       Math.random() * 1000
     ); 
-    
+    dancer.$node.html("<img src='robin.jpg'>").appendTo(".grid");
     $('.grid').append(dancer.$node);
     window.dancers.push(dancer); 
   });
@@ -40,7 +40,7 @@ $(document).ready(function() {
       $(".grid").width() * 0.75 * Math.random(),
       Math.random() * 1000
     );
-    batman.$batmanImg.html("<img src='Batman.png'>").fadeIn(2000).appendTo(".grid");
+    batman.$node.html("<img src='Batman.png'>").fadeIn(2000).appendTo(".grid");
     window.dancers.push(batman);
   });
   
@@ -53,7 +53,7 @@ $(document).ready(function() {
       $(".grid").width() * 0.75 * Math.random(),
       Math.random() * 1000
     );
-    gifDancer.$gifImg.html("<img src='https://media.giphy.com/media/nMSGo0Ulx4s9i/giphy.gif'>").appendTo(".grid");
+    gifDancer.$node.html("<img src='https://media.giphy.com/media/nMSGo0Ulx4s9i/giphy.gif'>").appendTo(".grid");
     window.dancers.push(gifDancer);
   });
   
@@ -87,21 +87,21 @@ $(document).ready(function() {
       let distance = Math.sqrt(Math.abs((xRange**2) - (yRange**2)));
 
       if (distance < 80) {
-        if (instance.$batmanImg) {
-          let imgBat = instance.$batmanImg[0].childNodes[0];
-          let $imgBat = $(imgBat);
-          $imgBat.css("height", "400px");
-        } 
-        else if (instance.$node) {
+        // if (instance.$batmanImg) {
+        //   let imgBat = instance.$batmanImg[0].childNodes[0];
+        //   let $imgBat = $(imgBat);
+        //   $imgBat.css("height", "400px");
+        // } 
+        // else if (instance.$node) {
           let imgNode = instance.$node[0].childNodes[0];
           let $imgNode = $(imgNode);
           $imgNode.css("height", "400px");
-        }
-        else if (instance.$gifImg) {
-          let imgGif = instance.$gifImg[0].childNodes[0];
-          let $imgGif = $(imgGif);
-          $imgGif.css("height", "400px");
-        }
+        // }
+        // else if (instance.$gifImg) {
+        //   let imgGif = instance.$gifImg[0].childNodes[0];
+        //   let $imgGif = $(imgGif);
+        //   $imgGif.css("height", "400px");
+        // }
       }
     });
   });

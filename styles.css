@@ -46,16 +46,15 @@ button:hover{
 }
 
 .dancer{
-  border:10px solid #FDE311;
-  border-radius:10px;
   position:absolute;
-}
-.batman, .gif{
-  position:absolute;
-  margin: 20px;
+  margin: 20px; /*added*/
 }
 img{
   height:200px;
   display: inline-block;
 }
 
+/*.batman, .gif{
+  position:absolute;
+  margin: 20px;
+}*/
