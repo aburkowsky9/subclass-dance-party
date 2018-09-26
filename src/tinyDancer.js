@@ -1,5 +1,5 @@
 var TinyDancer = function(top, left, timeBetweenSteps) {
-  this.$batmanImg = $('<div class="batman"></div>');
+  this.$batmanImg = $('<div class="batman item"></div>');
   BlinkyDancer.call(this, top, left, timeBetweenSteps); 
   
 };

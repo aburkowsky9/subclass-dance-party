@@ -1,5 +1,6 @@
 body, html{
   height:100%;
+  width:100%;
 }
 body{
   margin: 0px;
@@ -8,9 +9,20 @@ body{
   background-color:#444;
   font-size: 18px;
 }
+.grid{
+  overflow-wrap: normal; 
+  height:100%;
+  width: 100%;
+  padding: 20px;
+  background-image: url("https://pre00.deviantart.net/5770/th/pre/f/2015/060/d/3/batman_background_by_mrfiregem-d8k0ufv.png");
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; 
+}
 /* topbar */
 .topbar{
   height:32px;
+  width:100%;
   background-color: black;
 }
 .title{
@@ -40,10 +52,10 @@ button:hover{
   border-radius:10px;
   position:absolute;
 }
-.batman{
+.batman, .gif{
   position:absolute;
 }
 img{
-  height:225px;
-  
+  height:200px;
 }
+
